@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springstudy.bbs.mapper.CodeMapper" >
+	<select id="CommdSelect" resultType="Map">
+			select
+			    comm_num as COMMNUM,
+			    comm_name AS COMMNAME
+			from commd
+	</select>
+
+	<select id="CodeSelect" resultType="Map" parameterType="int">
+		select 
+			code_name as CODENAME
+		from code
+		where comm_num=#{codenum}
+	</select>
+</mapper>	
+
+
+

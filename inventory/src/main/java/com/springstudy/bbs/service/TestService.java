@@ -15,6 +15,7 @@ public class TestService {
     private TestUserMapper userMapper;
 
     public List<HashMap<String, Object>> getAllUsers() {
+    	
         return userMapper.findAllUsers();
     }   
 }
